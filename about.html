@@ -103,7 +103,8 @@
       <div class="row min-vh-xl-100 min-vh-xxl-25">
         <div class="col-md-7 col-xxl-6 text-center text-md-start">
           <h2 class="fw-bold text-light mb-4 mt-4 mt-lg-0">Measuring Alopecia<br class="d-none d-sm-block" /></h2>
-          <div style="text-align:center" class="text-light">아래의 버튼을 눌러 카메라를 실행합니다.<br class="d-none d-sm-block" />Press the button below to run the
+          <div style="text-align:center" class="text-light">아래의 버튼을 눌러 카메라를 실행합니다.<br class="d-none d-sm-block" />Press
+            the button below to run the
             camera. </div>
           <div class="py-3"><button class="btn btn-lg btn-light rounded-pill" href="#!" type="button"
               onclick="init()">Running the camera</button></div>
@@ -132,13 +133,31 @@
               // Note: the pose library adds "tmImage" object to your window (window.tmImage)
               model = await tmImage.load(modelURL, metadataURL);
               maxPredictions = model.getTotalClasses();
-              
+
               const devices = await navigator.mediaDevices.enumerateDevices()
+
+              var constraints = {
+                audio: false,
+                video: true
+            }
+
+            navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
+              /* use the stream */
+          }).catch(function(err) {
+              /* handle the error */
+          });
 
               // Convenience function to setup a webcam
               const flip = true; // whether to flip the webcam
               webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
-              await webcam.setup({ }); // request access to the webcam
+              await webcam.setup(
+                options: MediaTrackConstraints = {
+                       video: {
+                              deviceId: {
+                                 exact: "0xF12A"
+                                }
+                   }
+             ); // request access to the webcam
               await webcam.play();
               window.requestAnimationFrame(loop);
 
@@ -168,14 +187,15 @@
             }
           </script>
         </div>
-        <br/>
+        <br />
 
-        <br/>
+        <br />
         <div class="col-md-5 col-xxl-6"><img class="img-fluid" src="assets/img/gallery/eye-care.png" alt="..." /></div>
-        <br/>
-        <div style=text-align:center class="col-md-5 col-xxl-6"><img class="img-fluid" src="assets/img/gallery/Nude hair.png" alt="..." /></div>
-        
-        
+        <br />
+        <div style=text-align:center class="col-md-5 col-xxl-6"><img class="img-fluid"
+            src="assets/img/gallery/Nude hair.png" alt="..." /></div>
+
+
         <div style="text-align:center">
 
           <br />
