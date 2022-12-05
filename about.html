@@ -49,14 +49,6 @@
       }
 
       .box {
-        /* 이거 너무 할아버지 같음 ㅅㅂㅋㅋㅋ
-        margin : 0 auto;
-        border: 1px dotted gray;
-        border-radius: 30% ;
-        padding : 5px;
-        width : fit-content;
-        color : black */
-
         padding: 1em 1em;
         margin: 1em 0;
         font-weight: bold;
@@ -83,7 +75,9 @@
             class="navbar-toggler-icon"> </span></button>
         <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="about.html">탈모 검사</a>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="about.html">탈모 검사 진행하기</a>
+            </li>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="howtouse.html">탈모 검사 방법</a>
             </li>
           </ul>
         </div>
@@ -105,6 +99,8 @@
             <h2 class="fw-bold text-light mb-4 mt-4 mt-lg-0">Measuring Alopecia<br class="d-none d-sm-block" /></h2>
             <div style="text-align:center" class="text-light">아래의 버튼을 눌러 카메라를 실행합니다.<br class="d-none d-sm-block" />Press the button below to run the
               camera. </div>
+            <br/>
+            <div> <button class="btn btn-lg btn-light rounded-pill" onclick="window.location.href='howtouse.html'">검사 방법</button> </div>
             <div class="py-3"><button class="btn btn-lg btn-light rounded-pill" href="#!" type="button"
                 onclick="init()">카메라 실행</button></div>
             <div id="webcam-container"></div>
@@ -178,7 +174,7 @@
                 for (let i = 0; i < maxPredictions; i++) {
                   if (prediction[i].probability.toFixed(2) === '1.00') {
                     const item = data[prediction[i].className]
-                    labelContainer.innerHTML = '증상:' + item.name}
+                    labelContainer.innerHTML = '중증도 : ' + item.name}
                   }
               }
             </script>
@@ -188,7 +184,6 @@
           <br/>
           <div class="col-md-5 col-xxl-6"><img class="img-fluid" src="assets/img/gallery/eye-care.png" alt="..." /></div>
           <br/>
-          <div style=text-align:center class="col-md-5 col-xxl-6"><img class="img-fluid" src="assets/img/gallery/Nude hair.png" alt="..." /></div>
           
           
           <div style="text-align:center">
