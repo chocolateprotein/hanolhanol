@@ -2,7 +2,7 @@ var myVideoStream = document.getElementById('myVideo')     // make it a global v
   var myStoredInterval = 0
   
 function getVideo(){
-  navigator.getMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+  navigator.getMedia =  navigator.webkitGetUserMedia 
   navigator.getMedia({video: true, audio: false},
                      
     function(stream) {
