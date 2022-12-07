@@ -107,16 +107,13 @@
             <br/>
             <div> <button class="btn btn-lg btn-light rounded-pill" onclick="window.location.href='howtouse.html'">검사 방법</button> </div>
             <div class="py-3"><button class="btn btn-lg btn-light rounded-pill" href="#!" type="button"
-                onclick="{getVideo()}">카메라 실행</button></div>
+                onclick="init()">카메라 실행</button></div>
             <div id="webcam-container"></div>
             <div id="label-container"></div>
             <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
             <script
               src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 
-              <video  id="myVideo" width="400" height="300" style="border: 1px solid #ddd;"></video>
-              <script src="webcam.js"></script>
-              
             <script type="text/javascript">
               // More API functions here:
               // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
@@ -157,9 +154,9 @@
 
                 // Convenience function to setup a webcam
                 const flip = true; // whether to flip the webcam
-                // webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
-                // await webcam.setup(); // request access to the webcam
-                // await webcam.play();
+                webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+                await webcam.setup(); // request access to the webcam
+                await webcam.play();
                 window.requestAnimationFrame(loop);
 
                 // append elements to the DOM
