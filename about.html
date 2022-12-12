@@ -153,15 +153,7 @@
                 maxPredictions = model.getTotalClasses();
 
                 const devices = await navigator.mediaDevices.enumerateDevices()
-      //           .box {
-      //   padding: 1em 1em;
-      //   margin: 1em 0;
-      //   font-weight: bold;
-      //   border: solid 3px #5B8BD0;
-      //   /* #5B8BD0; */
-      //   border-radius: 50px;
-      //   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-      // }
+
                 //botton css
                 let cam = document.getElementById("webcam-container")
                 cam.style.padding ="1em 1em"
@@ -169,12 +161,15 @@
                 cam.style.border="solid 3px #5B8BD0"
                 cam.style.width="fit-content"
                 cam.style.borderRadius="50px"
+                cam.style.textAlign="center"
+                
                 let lab = document.getElementById("label-container")
-                cam.style.padding ="1em 1em"
-                cam.style.margin ="1em 0"
-                cam.style.border="solid 3px #5B8BD0"
-                cam.style.width="fit-content"
-                cam.style.borderRadius="50px"
+                lab.style.padding ="1em 1em"
+                lab.style.margin ="1em 0"
+                lab.style.border="solid 3px #5B8BD0"
+                lab.style.width="fit-content"
+                lab.style.borderRadius="50px"
+                lab.style.textAlign="center"
 
                 // Convenience function to setup a webcam
                 const flip = true; // whether to flip the webcam
