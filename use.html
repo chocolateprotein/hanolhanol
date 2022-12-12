@@ -1,0 +1,375 @@
+<!DOCTYPE>
+<html lang="Ko">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage full-screen navigation and sections control menu." />
+    <meta name="keywords"  content="fullpage,jquery,demo,scrollbar,scroll,bar,fullscreen,navigation,control arrows, dots" />
+    <meta name="Resource-type" content="Document" />
+
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>한올한올</title>
+
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- ---------font link------------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@900&display=swap" rel="stylesheet">
+
+    <style>
+
+
+/* --------------------  --------------------  --------------------  --------------------  --------------------  --------------------       -------------------- */
+      p {
+        /* margin : 1px ; 
+        border : 5px solid whitesmoke;
+        padding : 10px; */
+
+        width: fit-content;
+        height: auto;
+        font-size: 18;
+        color: white;
+        font-family: 'Noto Sans SC', sans-serif;
+      }
+
+      .box1 {
+        margin: 0 auto;
+        border: 3px solid;
+        border-radius: 10px;
+        padding: 10px;
+        width: fit-content;
+        height: auto;
+        font-size: 15;
+        color: whitesmoke;
+        font-family: 'Noto Sans SC', sans-serif;
+        text-align: center;
+      }
+
+      .box {
+        padding: 1em 1em;
+        margin: 1em 0;
+        font-weight: bold;
+        border: solid 3px #5B8BD0;
+        /* #5B8BD0; */
+        border-radius: 50px;
+        font-family: 'Noto Sans SC', sans-serif;
+      }
+      
+      .bottonfont {
+        font-size: 18;
+        font-family: 'Noto Sans SC', sans-serif;
+        font-weight: bold;
+      }
+      .headfont{
+        font-family: 'Noto Sans SC', sans-serif;
+        font-weight: bold;
+        color: whitesmoke;
+        text-align: center;
+      }
+
+      .h5st{
+        font-family: 'Noto Sans SC', sans-serif;
+        font-weight: bold;
+        color: #5B8BD0;
+        text-align: center;
+      }
+      .buttonfont {
+        font-family: 'Noto Sans SC', sans-serif;
+        font-weight: bold;
+      }
+    </style>
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <!-- /* --------------------  --------------------  --------------------  --------------------  --------------------  --------------------       -------------------- */ -->
+
+
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block"
+      data-navbar-on-scroll="data-navbar-on-scroll">
+      <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/gallery/logo.png" width="118" alt="logo" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"> </span></button>
+        <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+            <li class="buttonfont"><a class="nav-link" aria-current="page" href="about.html">탈모 검사</a></li>
+            <li class="buttonfont"><a class="nav-link" aria-current="page" href="howtouse.html">탈모 검사 방법</a>
+            </li>
+            <li class="buttonfont"><a class="nav-link" aria-current="page" href="use.html">탈모에 유용한 성분 </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+  
+
+  
+    
+    <section class="py-xxl-10 pb-0" id="home">
+      <div class="bg-holder bg-size"
+        style="background-image:url(assets/img/gallery/hero-bg.png);background-position:top center;background-size:cover;">
+      </div>
+      <!--/.bg-holder-->
+      
+      <div class="container">
+        <div class="row min-vh-xl-100 min-vh-xxl-25">
+          
+        <!-- ------------------------------------------------- -->
+        
+          <div class="col-md-7 col-xxl-6 text-centertext-md-start">
+            <br/>
+            <h1 class="headfont">탈모에는 어떤 성분이 좋나요<br class="d-none d-sm-block" /></h1>
+            <br/>
+            <div class="box1" ><br class="d-none d-sm-block" />성분이 궁금하신가요?<br> 밑에 나와있습니다!</div> 
+       
+          <!-- <div style=text-align:center class="col-md-5 col-xxl-6">
+        </div> -->
+          
+  
+          
+          <div style="text-align:center">
+
+            <br />
+
+            <div class="box">
+
+              <h5 class="h5st">탈모에 좋은 성분들 입니다.</h5 class="d-none d-sm-block">
+              <br>
+              <br class="d-none d-sm-block" />1.비오틴 
+              <br> 
+              - 비타민 B7로 불리는 비오틴은 에너지 생성을 돕고,
+              케라틴의 합성을 도아 모발의 성장과 조직 강화에 도움을 줌
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />2. 맥주효모 
+              <br>
+              - 모발 및 두피 관리, 피부관리에 효과를 보여줌.
+              6개월간 맥주효모 추출물을 복용한 결과로 눈에 띄는 모발 성장, 굵기, 강화에 효과를 보였음.
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />3. EGCG  
+              <br>
+              - 녹차에 다량 함유되어 두피 모낭과 진피세포의 건강을 
+              촉진하여  모발이 빠지거나, 가늘어지는 것을 예방한다. 
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />4. I-시스테인 
+              <br>
+               - 아미노산의 한 종류로 손, 발톱, 머리카락 등 
+              피부를 구성하는데 도움을 줌.
+              <br>
+              - 글루타티온을 증가시키며, 비오틴을 포함하여 특정 영양소를 대사하도록 도와줌
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />5. 아연 
+              <br>
+               - 모낭에서 머리카락이 빠지는 것을 억제하고 세포의 피부재생에 도움을 줌.
+              <br>
+              - 아연 보충을 유지했을 때 탈모가 재발하지 않았다는 연구결과가 있음.
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />6. 토코페놀
+              <br>
+              - 비타민 E의 한 종류로, 모공을 단단하고 머리에 윤기를 제공함.
+              항산화제로서 세포막의 손상 및 조직의 손상을 막는데 효과적임.
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />7. 셀레늄
+              <br>
+              - 항산화 성분으로, 활성산소가 일으키는 세포 손상을 늦추거나 예방.
+              글루타치온을 재생하는데 효과가 있으며 피부 손상 방지
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />8. 오메가-3
+              <br>
+              - 모낭에 영양을 원활히 공급하는데 도움을 주어 모발 건강에 효과적임. 염증억제효과로 두피의 염증을 막고, 두피의 손상 및 면역력 개선
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />9. 철분
+              <br>
+              - 모낭세포 촉진하는 역할을 하며, 모발 성장에 필요한 성분
+              철분 결핍 시 단백질 형태인 페리틴 수치가 하락해 모발에 탄력이 떨어지게 되고 탈모로 이어질 수 있음
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />10. 폴리페놀
+              <br>
+              - 항산화 특성을 가진 천연 식물 화합물의 일종이며, 염증 수치 조절에 도움을 줌
+              비듬 억제 및 5알파 환원 효소를 통해 DHT로 변하는 것을 막아 남성형 탈모에 효과적임
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />11. 테커신
+              <br>
+              - <동의보감> 기록에 의하면, '참당귀의 뿌리는 성질이 따뜻하고 염증을 삭이며 심장기능을 보호하여 혈액 생성을 촉진한다'라고 기록되어있음
+              활성 성분인 데커신의 영향으로, 원활한 혈액순환은 모발의 생성에 도움이된다,
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />12. 소팔메토
+              <br>
+              - 미국 야자톱 나무의 열매속에 함유된 전립선에 좋은 성분, 토마토, 마늘등과 함께 남성에게 좋은 건강식품
+              소팔메토 성분중 '로르산'과 '올레산'이 남성호르몬을 'DHT'호르몬으로 전환하는 환원효소의 활성을 저해시킨다.
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />13. 사포닌
+              <br>
+              - 인삼에서 주로 추출되는 사포닌은 진세노사이드라 불리는 화합물의 일종인데, 진세노사이드의 이동 거리에 따라서 Ro, Rf, Rb1 등으로 구분됨. Rb1 : 중추신경 억제, 해열진통, 간 보호, Rd : 부신피질 호르몬 분비 촉진
+              <br>
+              - 진세노사이드 Rb1과 Rd가 모발 성장을 촉진한다는 사실을 발견함으로써 진세노사이드가 탈모를 방지할 수 있음.
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />14. 리놀레산
+              <br>
+              - 모발이나 피부에 윤기를 주며 부족시 탈모를 유발할수 있다. 혈액중 콜레스트롤의 흐름을 부드럽게하여 동맥경화 등을 예방 할수 있다.
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />15. 프로폴리스
+              <br>
+              - 피부를 보호해주는 효능이 있다. 인체를 보호하는 효소인 SOD방어 물질을 생성하여 면역력 증진에 도움을 준다.
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />16. 이소폴라본
+              <br>
+              - 염증의 억제와 상피의 두께, 탄성 및 콜라겐 섬유수의 증가를 보이는 등 탈모 예방에 효과를 보임.
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />17. 식이유황
+              <br>
+              - 아미노산 생산, 결합조직, 머리카락, 면역력 강화 등에 관여하며 탈모 예방에 효과가 있는 것으로 나타남. 또한 콜라겐 생성에 관여
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />18. 콜라겐
+              <br>
+              - 피부, 혈관의 치유 및 생성에 효과가 좋으며 피부 탄력과 수분의 향상에 도움. 탈모 예방에 도움이 됨.
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />19. 키토산
+              <br>
+              - 키토산은 세포증식과 치유활성이 뛰어나며 모발에 피막을 형성하여 갈라진 모발을 코팅해 부드럽게 만들어주고 두피의 각질을 개선하는 역할을 함.
+              <br/>
+              <br/>
+              <br class="d-none d-sm-block" />20. 허브페시아
+              <br>
+              - 난막 추출물과 완두콩 및 기장 추출물이 주된 배합원료로 발모 촉진 및 탈모 예방에 도움.
+              
+              
+            </div>
+         
+
+          <div class="col-md-5 col-xl-6 col-xxl-7 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" /></div>
+          <div class="col-md-75 col-xl-6 col-xxl-5 text-md-start text-center py-6"></div>
+
+        </div>
+      </div>
+
+      <!-- -------------------------------------------------------------------- -->
+    </div>
+  </div>
+    </section>
+
+
+
+
+    <script src="vendors/@popperjs/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="vendors/fontawesome/all.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <!-- ------------------------------------------------------------------------------------------------------ -->
+    <script type="text/javascript" src="../dist/fullpage.js"></script>
+<script type="text/javascript" src="../examples/examples.js"></script>
+
+    <script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'orange', '#ccddff'],
+        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage', 'more0', 'more1', 'more2', 'more3', 'more4'],
+        slidesNavigation: true, 
+        navigation: true,
+        menu: '#menu',
+        scrollBar: true
+          });
+      </script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&amp;display=swap"
+      rel="stylesheet">
+
+   
+
+
+    <!-- Channel Plugin Scripts -->
+    <script>
+      (function () {
+        var w = window;
+        if (w.ChannelIO) {
+          return (window.console.error || window.console.log || function () { })('ChannelIO script included twice.');
+        }
+        var ch = function () {
+          ch.c(arguments);
+        };
+        ch.q = [];
+        ch.c = function (args) {
+          ch.q.push(args);
+        };
+        w.ChannelIO = ch;
+        function l() {
+          if (w.ChannelIOInitialized) {
+            return;
+          }
+          w.ChannelIOInitialized = true;
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+          s.charset = 'UTF-8';
+          var x = document.getElementsByTagName('script')[0];
+          x.parentNode.insertBefore(s, x);
+        }
+        if (document.readyState === 'complete') {
+          l();
+        } else if (window.attachEvent) {
+          window.attachEvent('onload', l);
+        } else {
+          window.addEventListener('DOMContentLoaded', l, false);
+          window.addEventListener('load', l, false);
+        }
+      })();
+      ChannelIO('boot', {
+        "pluginKey": "28d80908-539c-4864-b8d0-4bc5b569d703"
+      });
+    </script>
+    <!-- End Channel Plugin -->
+
+  </body>
+
+</html>
