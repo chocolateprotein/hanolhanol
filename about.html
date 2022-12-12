@@ -57,9 +57,13 @@
         border-radius: 50px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
       }
-      .buttonfont {
-        font-family: 'Noto Sans SC', sans-serif;
-        font-weight: bold;
+
+      #btn{
+        transition-duration: 0.3s;
+      }
+      #btn:active{
+        margin-left: 2px;
+        margin-top: 2px;
       }
     </style>
 
@@ -79,12 +83,11 @@
             class="navbar-toggler-icon"> </span></button>
         <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-            <li class="buttonfont"><a class="nav-link" aria-current="page" href="about.html">탈모 검사 진행하기</a>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="about.html">탈모 검사</a>
             </li>
-            <li class="buttonfont"><a class="nav-link" aria-current="page" href="howtouse.html">탈모 검사 방법</a>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="howtouse.html">탈모 검사 방법</a>
             </li>
-            <li class="buttonfont"><a class="nav-link" aria-current="page" href="use.html">탈모에 유용한 성분 </a>
-            </li>
+            <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="use.html">성분 추천 종류 </a></li>
           </ul>
         </div>
       </div>
@@ -102,12 +105,11 @@
       <div class="container">
         <div class="row min-vh-xl-100 min-vh-xxl-25">
           <div class="col-md-7 col-xxl-6 text-center text-md-start">
-            <h2 class="fw-bold text-light mb-4 mt-4 mt-lg-0">Measuring Alopecia<br class="d-none d-sm-block" /></h2>
-            <div style="text-align:center" class="text-light">아래의 버튼을 눌러 카메라를 실행합니다.<br><br class="d-none d-sm-block" />Press the button below to run the
-              camera. </div>
+            <h2 class="fw-bold text-light mb-4 mt-4 mt-lg-0">탈모 검사<br class="d-none d-sm-block" /></h2>
+            <div style="text-align:center" class="text-light">아래의 버튼을 눌러 카메라를 실행합니다.<br/> </div>
             <br/>
-            <div> <button class="btn btn-lg btn-light rounded-pill" onclick="window.location.href='howtouse.html'">검사 방법</button> </div>
-            <div class="py-3"><button class="btn btn-lg btn-light rounded-pill" href="#!" type="button"
+            <div id="btn"> <button class="btn btn-lg btn-light rounded-pill" onclick="window.location.href='howtouse.html'">검사 방법</button> </div>
+            <div id="btn" class="py-3"><button class="btn btn-lg btn-light rounded-pill" href="#!" type="button"
                 onclick="init()">카메라 실행</button></div>
             <div id="webcam-container"></div>
             <div id="label-container"></div>
@@ -151,11 +153,26 @@
                 maxPredictions = model.getTotalClasses();
 
                 const devices = await navigator.mediaDevices.enumerateDevices()
+      //           .box {
+      //   padding: 1em 1em;
+      //   margin: 1em 0;
+      //   font-weight: bold;
+      //   border: solid 3px #5B8BD0;
+      //   /* #5B8BD0; */
+      //   border-radius: 50px;
+      //   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+      // }
+                //botton css
+                let btn = document.getElementById("btn")
+                btn.style.padding ="1em 1em"
+                btn.style.margin ="1em 0"
+                btn.style.border="solid 3px #5B8BD0;"
+                btn.style.borderRadius="50px"
 
                 // Convenience function to setup a webcam
                 const flip = true; // whether to flip the webcam
                 webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
-                await webcam.setup(); // request access to the webcam
+                await webcam.setup({facingMode: "environment"}); // request access to the webcam
                 await webcam.play();
                 window.requestAnimationFrame(loop);
 
